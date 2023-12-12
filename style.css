@@ -1,0 +1,42 @@
+body{
+    background-color: salmon;
+}
+
+.container{
+    width: 38%;
+    background-color: rgba(255, 255, 255, .3);
+    margin-top: 10%;
+    font-size: 19px;
+    padding: 2% 1%;
+    border-radius: 7px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+h1{
+    font-weight: bold;
+}
+
+#wordInput {
+    width: 70%;
+    border-radius: 7px;
+    border: 1px solid white;
+}
+
+.hidden{
+    display: none;
+}
+
+#description {
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        margin-top: 30%;
+    }
+
+    #wordInput {
+        width: 90%;
+    }
+}
