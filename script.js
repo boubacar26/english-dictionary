@@ -12,20 +12,34 @@ function getData() {
         
         let wordAudio = document.getElementById('wordAudio')
 
-        let audio = `<audio controls src = ${data[0].phonetics[0].audio} >
+        let audio = `American accent: </br> <audio controls src = ${data[0].phonetics[0].audio} >
             <a href=${data[0].phonetics[0].audio}>Play audio</a>
             </audio>`
 
         wordAudio.innerHTML += audio
-    })
 
+        // Deuxieme audio
+
+        let wordAudioUk = document.getElementById('wordAudioUk')
+        let audioUK = `British accent: </br> <audio controls src = ${data[0].phonetics[1].audio} >
+            <a href=${data[0].phonetics[1].audio}>Play audio</a>
+            </audio>` 
+
+        wordAudioUk.innerHTML += audioUK
+        
+        
+    })
+    
     wordAudio.innerHTML = ""
+    
+    wordAudioUk.innerHTML = ""
+
 
     let texte = document.getElementById('description')
     texte.classList.add('hidden')
 }
 
-// Fonction pour rechercher le mot quand on appuie sur la touche 'Enter'
+// Fonction pour rechercher le mot quand on appuie sur la touche 'Enter' 
 function handleKeyPress(event) {
     if (event.key === "Enter") {
         getData();
